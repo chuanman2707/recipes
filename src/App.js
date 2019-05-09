@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react'
 import './App.css';
+import {recipes} from './tempList';
+import RecipeList from './components/RecipeList';
+import RecipeDetail from './components/RecipeDetail';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  state = {
+    recipes: [],
+    url: "https://www.food2fork.com/api/search?key=8245181b4549e2065e02d3481a419134"
+  }
+  render() {
+    return (
+      <>
+      <RecipeList />
+      <RecipeDetail />
+      </>
+    )
+  }
 }
-
-export default App;
