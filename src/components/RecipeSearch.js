@@ -4,7 +4,7 @@ export default class RecipeSearch extends Component {
   render() {
     return (
         <>
-        <h1>hello from recipe search</h1>
+        <h1>hello from recipesearch</h1>
         </>
     )
   }
