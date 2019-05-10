@@ -8,10 +8,11 @@ export default class App extends Component {
   //initial empty state
   state = {
     recipes: recipes,
-    url: "https://www.food2fork.com/api/search?key=8245181b4549e2065e02d3481a419134"
-  };
+    url: "https://www.food2fork.com/api/search?key=8245181b4549e2065e02d3481a419134",
+    details_id:35322 
+    };
 
-//   //try to get the data using async method
+  //try to get the data using async method
 // async getRecipes() {
 //   try{
 //     const data = await fetch(this.state.url);
@@ -31,12 +32,12 @@ export default class App extends Component {
 //   this.getRecipes();
 // }
   render() {
-    console.log(this.state.recipes)
+    // console.log(this.state.recipes)
 
     return (
       <>
-      <RecipeList recipes={this.state.recipes} />
-      <RecipeDetail />
+      {/* <RecipeList recipes={this.state.recipes} /> */}
+      <RecipeDetail id={this.state.details_id}/>
       </>
     )
   }
